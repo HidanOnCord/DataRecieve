@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_world():
-    async def send_info():
+    #async 
+    def send_info():
         global a
         a = request.form
         print(a['name'])
@@ -18,7 +19,7 @@ def hello_world():
                     requests.post(link, data={item:value})
     
     if request.method == 'POST':
-        asyncio.run(send_info())
+        send_info()
         return render_template('base.html', a=a)
     
     
