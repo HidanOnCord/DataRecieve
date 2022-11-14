@@ -9,7 +9,7 @@ def hello_world():
         global a
         a = request.form
         print(a['name'])
-        requests.post("http://127.0.0.1:5000/", data=a)
+        requests.post("http://127.0.0.1:5000/", data=a, verify="false")
         
     if request.method == 'POST':
         asyncio.run(send_info())
