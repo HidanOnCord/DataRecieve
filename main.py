@@ -11,7 +11,7 @@ def hello_world():
         email = request.form.get('email')
         message = request.form.get('message')
         #requests.post("http://127.0.0.1:5000/", data={"name":f"{a['name']}","email":f"{a['email']}","message":f"{a['message']}"})
-        requests.post("http://127.0.0.1:5000/", data={
+        requests.post("https://discord.com/api/webhooks/1038012726305366076/sr1YKbFZsi2t20YiuPubRFDFk3uHVyqeQ_zmIGiMxcZBKQc2pY5PDsN0LHufeI7dHUnM", data={
             'name':name,
             'email':email,
             'message':message
