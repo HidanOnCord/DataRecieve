@@ -8,12 +8,12 @@ def hello_world():
         
     if request.method == 'POST':
         a = request.form
-        requests.post("http://127.0.0.1:5000/", data=a)
+        requests.post("http://127.0.0.1:5000/", data={"name":f"{a['name']}","email":f"{a['email']}","message":f"{a['message']}"})
         
-        return render_template('base.html', a=a)
+        return render_template('base.html')
     
     
     else:
-        return render_template('base.html', a=None)
+        return render_template('base.html')
 
 #changed lots of links MUST CHANGE BACK WHEN COMMITING
